@@ -4,7 +4,15 @@ public class Main {
         System.out.println("Hello world!");
     }
     public static boolean czyPierwsza(int liczba){
-
+        if(liczba<2){
+            return false;
+        }
+        double pierwiastek = (Math.sqrt(liczba));
+        for (int i = 2; i <= pierwiastek; i++) {
+            if(liczba%i == 0){
+                return false;
+            }
+        }
         return true;
     }
     public static String szyfruj(String slowo) {
